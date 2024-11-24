@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <form action="" class="form-menu">
+        <label for="menu" class="lbl-menu">
+            <input type="checkbox" name="menu" id="menu" checked>
+            <span></span>
+            Menu
+        </label>
+    </form>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#" class="main-nav_profile">
+                <img src="imagens/perfil.png" alt="David Luiz Ricardo" class="main-nav_profile-image">
+            </a>
+
+            <ul class="main-nav_btn">
+                <li class="btn"><a href="index.html" class="btn-links">Home</a></li>
+                <li class="btn"><a href="tipografia.html" class="btn-links">Tipografia</a></li>
+                <li class="btn"><a href="cards.html" class="btn-links">Cards</a></li>
+                <li class="btn"><a href="listas.html" class="btn-links">Listas</a></li>
+                <li class="btn"><a href="formulario.html" class="btn-links">Formulário</a></li>
+                <li class="btn"><a href="botoes.html" class="btn-links">Botões</a></li>
+                <li class="btn"><a href="tabelas.html" class="btn-links">Tabelas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main-title">My Components</h1>
+
+            <article class="highlight">
+                <h2 class="content_title">Tipografia</h2>
+                <p class="content_description">A Tipografia transmite nossas definições humanas de tamanhos e
+                    espaçamento e
+                    deve ser utilizada respeitando a hierarquia dos elementos na interface</p>
+            </article>
+
+            <section>
+                <h3 class="content_subtitle">Elementos</h3>
+
+                <article>
+                    <h4>Textos</h4>
+
+                    <p>Esse texto esta escrito em <b>negrito</b> e esse texto é um <strong>texto forte</strong>.</p>
+                    <p>Esse texto está em <i>itálico</i> e este está <em>com ênfase</em>.</p>
+                    <p>Isto é um texto escrito de forma <u class="underline">erada</u> e isso é um <a href="#">link</a>.
+                    </p>
+                </article>
+
+                <article>
+                    <h4>Sobreescrito e subscrito</h4>
+
+                    <p>3<sup>2</sup> é igual à 9</p>
+                    <p>H<sub>2</sub>O é a fórmula química da água</p>
+                </article>
+
+                <article>
+                    <h4>Abreviação</h4>
+
+                    <p>Para criar páginas na WEB precisamos aprender <abbr title="Hypertext Markup Language">HTML</abbr>
+                    </p>
+                    <p>Para criar páginas web precisamos aprender Sobre <a href="html-dfn"><abbr
+                                title="Hypertext Markup Language">HTML</abbr></a>
+                    </p>
+                    <p>O <dfn id="html-dfn"><abbr title="Hypertext Markup Language">HTML</abbr> </dfn> é a principal
+                        linguagem da web onde podemos incluir nosso conteúdo de forma semântica</p>
+                </article>
+
+                <article>
+                    <h4>Citações</h4>
+                    <blockquote>
+                        <p>O ruim não é ter trabalho. O ruim é ter de trabalhar</p>
+                        <cite>Seu Madruga</cite>
+                    </blockquote>
+                    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                        O elemento HTML indica que o texto incluso é uma citação estendida. Normalmente, isso é renderizado visualmente por recuo (veja Notas para saber como alterá-lo). Uma URL para a fonte da citação pode ser dada usando o atributo, enquanto uma representação de texto da fonte pode ser dada usando o elemento.&lt;blockquote&gt; cite&lt;cite&gt;</cite>
+                    </blockquote>
+                    
+                    <p>Segundo o Seu Madruga, <q>A vingança nunca é plena, mata a alma e a envenena</q>.</p>
+                </article>
+
+                <article>
+                    <h4><q>coisas</q> de computador</h4>
+
+                    <p>A propriedade <code>background</code> do <abbr title="Cascating Style Sheet">CSS</abbr> serve para colocar uma imagem de fundo</p>
+                    <pre>
+                        Este texto é um texto 
+                        
+                        pré-formatado.
+                    </pre>
+
+                    <pre>
+                        <code>
+                            article {
+                                padding: 80%;
+                            }
+                        </code>
+                    </pre>
+
+                    <p>
+                        Após executar o método <code>push()</code> obtive o  retorno 
+                        <samp lang="en-US">underfined has not a push() function</samp> <!--Usar o atributo lang, aqui, apenas informará mais semanticamente ao browser-->
+                    </p>
+                    
+                    <p>Pressione as teclas <kbd> CTRL</kbd> + <kdb>C</kbd> para copiar</p>
+                </article>
+
+                <article>
+                    <h4>Datas e horários</h4>
+
+                    <p>O evento ocorrerá em <time datetime="2025-11-10">10 de dezembro de 2025.</time></p>
+                    <p>O evento ocorrerá em <time datetime="2025-11-10">10/11/2025</time>.</p>
+                    <p>O evento ocorrerá às <time datetime="2025-11-10T20:00:00-03:00">20h00 do dia 10 de novembro de 2025</time>.</p>
+                    
+                    <h5 lang="en-us">JS Conference</h5>
+                    <p>O evento iniciará exatamente às <time datetime="19:00">19h00</time>.</p>
+
+                    <p>O evento ocorrerá às 20h00 do dia <del>10 de novembro de 2025</del> <time datetime="2025-11-11T20:00:00-03:00"> <ins>20h00 do dia 11 de Novembro de 2025</time></ins>.</p>
+                </article>
+
+                <article>
+                    <h4></h4>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

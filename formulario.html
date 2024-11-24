@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <form action="" class="form-menu">
+        <label for="menu" class="lbl-menu">
+            <input type="checkbox" name="menu" id="menu" checked>
+            <span></span>
+            Menu
+        </label>
+    </form>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#" class="main-nav_profile">
+                <img src="imagens/perfil.png" alt="David Luiz Ricardo" class="main-nav_profile-image">
+            </a>
+
+            <ul class="main-nav_btn">
+                <li class="btn"><a href="index.html" class="btn-links">Home</a></li>
+                <li class="btn"><a href="tipografia.html" class="btn-links">Tipografia</a></li>
+                <li class="btn"><a href="cards.html" class="btn-links">Cards</a></li>
+                <li class="btn"><a href="listas.html" class="btn-links">Listas</a></li>
+                <li class="btn"><a href="formulario.html" class="btn-links">Formulário</a></li>
+                <li class="btn"><a href="botoes.html" class="btn-links">Botões</a></li>
+                <li class="btn"><a href="tabelas.html" class="btn-links">Tabelas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="container">
+            <h1 class="main-title">My Components</h1>
+
+            <h2 class="content_subtitle">Entre em contato</h3>
+                <article class="flex_container2">
+                    <form action="">
+                        <fieldset>
+                            <div class="flex_container2">
+                                <div class="input-width">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome" required placeholder="Nome completo">
+                                </div>
+                                <div class="input-width">
+                                    <label for="mail">Email</label>
+                                    <input type="email" name="email" id="mail" maxlength="500"
+                                        placeholder="exemplo@gmail.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message">Digite sua mensagem</label>
+                                <textarea name="message" id="message" minlength="10" maxlength="1000" rows="7"
+                                    placeholder="Escreva sua mensagem aqui"></textarea>
+                            </div>
+                            <button type="submit" class="btn2"><b>Enviar</b></button>
+                        </fieldset>
+                    </form>
+                    <address>
+                        <p>Endereço: 1234 Somewhere Rd. Nashville, TN 00000 United States</p>
+                        <p>Telefone: 000-000-000</p>
+                        <p>Email: email@server.com</p>
+                    </address>
+                </article>
+                <article>
+                    <h2 class="content_subtitle">Quiz</h2>
+                    <form action="">
+                        <label for="tecnologia">Qual é sua linguagem preferida?</label>
+                        <select name="tecnologia" id="tecnologia">
+                            <option value="null">Selecione</option>
+                            <option value="javascript">Javascript</option>
+                            <option value="html5">HTML5</option>
+                            <option value="css3">CSS3</option>
+                        </select>
+
+                        <label>Baixa Prioridade <input type="radio" name="prioridade" value="baixa"></label>
+                        <label>Média Prioridade <input type="radio" name="prioridade" value="media"></label>
+                        <label>Alta Prioridade <input type="radio" name="prioridade" value="alta"></label>
+
+                        <label><input type="checkbox" name="copy" value="true">Envie-me uma cópia</label>
+                        <label><input type="checkbox" name="human" value="true">Sou humano</label>
+                        <div class="flex_container2">
+                            <button type="reset" class="btn2-light">Limpar</button>
+                            <button type="submit" class="btn2-transparent">Enviar</button>
+                        </div>
+                    </form>
+                </article>
+        </section>
+    </main>
+</body>
+
+</html>

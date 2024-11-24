@@ -1,0 +1,506 @@
+:root {
+    --primary-color: #FF7833;
+    --secondary-color: #31333b;
+    --secondary-color-darkTransparent: #31333bc5;
+    --secondary-color-transparent: #31333b99;
+    --secondary-color-light: #444856;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    position: relative;
+    background-image: url(imagens/bg-unsplash.png);
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    margin: 0;
+    color: #e7e7e7;
+    line-height: 1.7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body:has(.form-menu .lbl-menu input[type="checkbox"]:checked) .main-header{
+    transform: translateX(0%);
+}
+
+body:has(.form-menu .lbl-menu input[type="checkbox"]:checked) .main {
+    transform: translateX(0%);
+}
+
+.form-menu {
+    position: fixed;
+    margin: 3rem 2rem;
+    font-size: 1.6rem;
+    z-index: 1;
+}
+
+.lbl-menu span {
+    display: inline-block;
+    width: 4rem;
+    outline: 2px solid #1b1b1b;
+    height: 2rem;
+    border-radius: 16px;
+    background-color: whitesmoke;
+    margin-right: 1rem;
+    transition: background-color .5s;
+}
+
+.lbl-menu span::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #31333b;
+    transition: transform .5s, background-color 1s;
+}
+
+#menu {
+    display: none;
+}
+
+#menu[type="checkbox"]:checked + span::before {
+    transform: translateX(100%);
+    background-color: rgb(255, 255, 255);
+}
+
+#menu[type="checkbox"]:checked + span {
+    background-color: greenyellow;
+}
+
+.main-header {
+    width: 260px;
+    background-color: var(--secondary-color-transparent);
+    position: fixed;
+    min-height: 100vh;
+    transition: transform .5s;
+    transform: translateX(-100%);
+}
+
+.main-nav {
+    width: 85%;
+    margin: 4.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+}
+
+.main-nav_profile {
+    border-radius: 50%;
+    display: block;
+    width: fit-content;
+}
+
+.main-nav_profile-image {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.main-nav_btn {
+    width: 100%;
+    padding: 0;
+}
+
+.main-nav_btn > .btn {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid gray;
+    width: 100%; 
+}
+
+.main-nav_btn > .btn > a {
+    text-decoration: none;
+    display: block;
+    max-inline-size: 100%;
+    text-align: right;
+    padding: 1.8rem 0;
+    width: calc(50% + 10px);
+    transition: width .1s;
+    margin-left: auto;
+}
+
+.btn:hover a {
+    width: 100%;
+    text-align: center;
+    padding: 1.8rem 0;
+}
+
+.main {
+    min-height: 100vh;
+    flex-basis: 100%;
+    flex: 1 0;
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+    background-color: #44485699;
+    transform: translateX(100%);
+    transition: transform .5s;
+}
+
+.container{
+    margin: 0 5rem 5rem;
+    max-width: 100%;
+}
+
+a {
+    color: #e7e7e7;
+}
+
+.main-title {
+    width: fit-content;
+    color: #9296a7;
+    font-size: 3.6rem;
+    margin: 7.5rem 0 3.5rem;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+.content_title {
+    font-size: 2.4rem;
+}
+
+
+.content_title + .content_subtitle {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+.content_description {
+    font-size: 1.6rem;
+    line-height: 4.5rem;
+    width: 90%;
+    font-weight: 500;
+}
+
+.content_subtitle {
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+.highlight {
+
+    border-left: var(--primary-color) solid 1px;
+    font-size: 1.1em;
+    padding: 0 0 0 3rem;
+    margin-bottom: 4em;
+}
+
+article {
+    padding: 1em 0;
+}
+
+.card {
+    max-width: 74rem;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+.card_title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.card_title-2 {
+    font-size: 1.8em;
+}
+
+.card_title-3 {
+    font-size: 1.6em;
+}
+
+.card_title-4 {
+    font-size: 1.4em;
+}
+
+.card_content {
+    padding: 1.75em 1.5em 1.5em;
+    margin: 0;
+}
+
+.card_content p {
+    margin: 1em 0 0;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card_description--2 {
+    font-size: 2rem;
+}
+
+.card_description--3 {
+    font-size: 1em;
+}
+
+.card_description--4 {
+    font-size: 1em;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    justify-content: space-between;
+}
+
+.row > * {
+    /*flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0%;*/
+    /*O professor fez isso para que os elementos da página "listas.html" tivessem o mesmop tamanho, independente de seu conteúdo, de forma a alinhá-las perfeitamente*/
+    flex: 1 0 0%;
+    font-size: 1.6rem;
+}
+
+.alternate {
+    list-style: none;
+    padding-left: 0;
+}
+
+.alternate li:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.roman {
+    list-style-type:  upper-roman;
+}
+
+.list-emoji {
+    list-style-type: "\1F642";
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.flex_container2 {
+    display: flex;
+    gap: 32px;
+    margin: 0 0 1.6rem;
+    width: 100%;
+}
+
+.semi_container {
+    width: 50%;
+}
+
+fieldset {
+    border: none;
+}
+
+.btn2 {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+}
+
+input,
+label,
+textarea,
+select,
+button {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    padding: .8rem;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    background-color: #ccc;
+}
+
+#tecnologia {
+    margin-bottom: 1rem;
+}
+
+.input-width {
+    width: 50%;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+.btn2 {
+    border: 1px solid var(--secondary-color-light);
+    margin: 1.4rem 0;
+    color: whitesmoke;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn2-transparent {
+    border: 1px solid var(--secondary-color-light);
+    margin: 1.4rem 0;
+    color: whitesmoke;
+    background-color: transparent;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn2-light {
+    border: 1px solid var(--secondary-color-light);
+    margin: 1.4rem 0;
+    background-color: whitesmoke;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn2-transparent:hover {
+    border: 1px solid var(--secondary-color-light);
+    background-color: var(--secondary-color);
+}
+
+.btn2:hover {
+    border: solid 1px var(--secondary-color);
+    background-color: var(--secondary-color-light);
+}
+
+.btn3 {
+    border: 1px solid var(--secondary-color-light);
+    color: whitesmoke;
+    padding: 1rem 1.7rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-small {
+    height: 100%;
+    margin: auto 0;
+}
+
+.btn3:hover {
+    border: solid 1px var(--secondary-color);
+    background-color: var(--secondary-color-light);
+}
+
+.btn-name-small {
+    font-size: 1rem;
+}
+
+form {
+    /*caso atrapalhe outro elemento, no futuro, criar uma classe no form da página formulário para definir o tamanho dele como 2/3*/
+    width: 50%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin: .8rem 0;
+}
+
+input[type="checkbox"] {
+    width: 1.5rem;
+    margin-left: .5rem;
+}
+
+address {
+    font-size: 1.2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table td:last-child, .table th:last-child {
+    text-align: right;
+}
+
+.table td,
+.table th {
+    padding: 1.6rem;
+}
+
+.table:not(.table-alternate) td, .table:not(.table-alternate) th {
+    border-bottom: 2px solid gray;
+}
+
+.table-alternate tbody tr:nth-child(odd) {
+    background-color: var(--secondary-color-darkTransparent);
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child) {
+    border-right: 1px solid gray;
+}
+
+.icon {
+    display: inline-block;
+    margin: 0 1rem 0 2rem;
+    width: 4rem;
+    height: 4rem;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.icon-link {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color .2s;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.icon-link:hover {
+    color: var(--primary-color);
+}
